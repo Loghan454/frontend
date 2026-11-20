@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Retro Memory Arcade</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="jogo.js" defer></script>
+</head>
+
+<body>
+  <main>
+    <section id="opening" class="tela abertura">
+      <div class="logo">
+        <div class="marca" aria-hidden="true">✦</div>
+        <h1>RETRO <span>MEMORY</span><small>Ａ Ｒ Ｃ Ａ Ｄ Ｅ</small></h1>
+      </div>
+    </section>
+    <section id="menu" class="tela" hidden>
+      <p class="modo">◆ MODO 2 JOGADORES ◆</p>
+      <h2>Menu inicial</h2>
+      <p>Vire duas cartas. Encontre os pares.</p>
+      <button id="start" class="principal">Iniciar partida</button>
+      <button id="resume" hidden>Continuar partida</button>
+      <details>
+        <summary>Como jogar</summary>
+        <p>Um par vale 1 ponto e dá direito a outra jogada. Se as cartas forem diferentes, elas se fecham e a vez passa.
+          Vence quem encontrar mais pares.</p>
+      </details>
+    </section>
+    <section id="game" hidden>
+      <header>
+        <p class="modo">◆ MODO 2 JOGADORES ◆</p>
+        <h2 class="titulo">RETRO <span>MEMORY</span><small>Ａ Ｒ Ｃ Ａ Ｄ Ｅ</small></h2>
+        <p>Vire duas cartas. Encontre os pares.</p>
+      </header>
+      <section class="painel" aria-label="Partida">
+        <div class="placar">
+          <div id="player-1" class="jogador">JOGADOR 1 <strong id="score-1">00</strong></div>
+          <span aria-hidden="true">VS</span>
+          <div id="player-2" class="jogador">JOGADOR 2 <strong id="score-2">00</strong></div>
+        </div>
+        <p id="status" role="status" tabindex="-1"></p>
+        <div id="board" aria-label="Tabuleiro com 16 cartas"></div>
+        <footer><span id="progress"></span><button id="reset">Nova partida</button></footer>
+      </section>
+      <button id="back">Voltar ao menu</button>
+    </section>
+  </main>
+</body>
+
+</html>
